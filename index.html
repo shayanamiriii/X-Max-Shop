@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="vایکس مکس شاپiewport" content="width=device-width, initial-scale=1.0">
+  <> — </>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__orb ambient__orb--1"></div>
+    <div class="ambient__orb ambient__orb--2"></div>
+    <div class="ambient__orb ambient__orb--3"></div>
+  </div>
+
+  <div class="nav-overlay" id="nav-overlay" hidden aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <nav class="main-nav" aria-label="منوی اصلی">
+      <a href="/" class="nav-brand" aria-label="صفحه اصلی ">
+        <span class="nav-brand__mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M11 2L20 7v8l-9 5-9-5V7l9-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M11 11l9-4M11 11v9M11 11L2 7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="nav-brand__text"></span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="باز و بسته کردن منو"
+      >
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li class="nav-item" role="none">
+          <a href="/" class="nav-link" role="menuitem">
+            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+              <path d="M3 9.5L11 3l8 6.5V19a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M8 20V12h6v8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            <span>خانه</span>
+          </a>
+        </li>
+
+        <!-- ایکس مکس محصولات — چند ستونه -->
+        <li class="nav-item nav-item--has-XMAXSHOP nav-item--XMAXSHOP-full" role="none">
+          <button
+            class="nav-link nav-link--trigger"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="XMAXSHOP-products"
+            id="trigger-products"
+          >
+            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+              <path d="M4 7h14M4 11h14M4 15h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>محصولات</span>
+            <svg class="nav-link__chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3.5 5.5L7 9l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div
+            class="XMAXSHOP XMAXSHOP--full XMAXSHOP--nested"
+            id="XMAXSHOP-products"
+            role="menu"
+            aria-labelledby="trigger-products"
+            hidden
+          >
+            <div class="XMAXSHOP__container">
+              <div class="XMAXSHOP-nested">
+                <!-- سطح ۱: دسته‌های اصلی -->
+                <nav class="XMAXSHOP-nested__sidebar" aria-label="دسته‌های محصولات">
+                  <p class="XMAXSHOP-nested__sidebar-label">دسته‌بندی</p>
+                  <ul class="XMAXSHOP-nested__cats">
+                    <li>
+                      <button class="XMAXSHOP-nested__cat is-active" type="button" data-panel="panel-tools" aria-expanded="true" aria-controls="panel-tools">
+                        <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--tools" aria-hidden="true">
+                          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M3 8h14" stroke="currentColor" stroke-width="1.5"/>
+                          </svg>
+                        </span>
+                        <span class="XMAXSHOP-nested__cat-text">
+                          <span class="XMAXSHOP-nested__cat-label">ابزارها</span>
+                          <span class="XMAXSHOP-nested__cat-desc">ویرایش و ساخت</span>
+                        </span>
+                        <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                          <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="XMAXSHOP-nested__cat" type="button" data-panel="panel-templates" aria-expanded="false" aria-controls="panel-templates">
+                        <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--templates" aria-hidden="true">
+                          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 4h5v5H4zM11 4h5v5h-5zM4 11h5v5H4zM11 11h5v5h-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        <span class="XMAXSHOP-nested__cat-text">
+                          <span class="XMAXSHOP-nested__cat-label">قالب‌ها</span>
+                          <span class="XMAXSHOP-nested__cat-desc">آماده و قابل سفارشی</span>
+                        </span>
+                        <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                          <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="XMAXSHOP-nested__cat" type="button" data-panel="panel-resources" aria-expanded="false" aria-controls="panel-resources">
+                        <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--resources" aria-hidden="true">
+                          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 3l7 4v6l-7 4-7-4V7l7-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        <span class="XMAXSHOP-nested__cat-text">
+                          <span class="XMAXSHOP-nested__cat-label">منابع</span>
+                          <span class="XMAXSHOP-nested__cat-desc">آموزش و مستندات</span>
+                        </span>
+                        <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                          <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="XMAXSHOP-nested__cat" type="button" data-panel="panel-enterprise" aria-expanded="false" aria-controls="panel-enterprise">
+                        <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--enterprise" aria-hidden="true">
+                          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M3 17V7l7-4 7 4v10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M7 17v-5h6v5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        <span class="XMAXSHOP-nested__cat-text">
+                          <span class="XMAXSHOP-nested__cat-label">سازمانی</span>
+                          <span class="XMAXSHOP-nested__cat-desc">تیم‌ها و شرکت‌ها</span>
+                        </span>
+                        <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                          <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+
+                <!-- سطح ۲ و ۳: زیرمنوها -->
+                <div class="XMAXSHOP-nested__content">
+                  <!-- پنل ابزارها -->
+                  <div class="XMAXSHOP-nested__panel is-active" id="panel-tools" role="region" aria-label="ابزارها">
+                    <header class="XMAXSHOP-nested__panel-header">
+                      <h3 class="XMAXSHOP-nested__panel-title">ابزارهای خلاقانه</h3>
+                      <a href="/tools" class="XMAXSHOP-nested__panel-all">مشاهده همه</a>
+                    </header>
+                    <div class="XMAXSHOP-nested__groups">
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">طراحی</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/editor" class="XMAXSHOP-nested__link" role="menuitem">
+                            <span>ویرایشگر طراحی</span>
+                            <span class="XMAXSHOP-nested__link-badge">محبوب</span>
+                          </a></li>
+                          <li><a href="/editor/ui" class="XMAXSHOP-nested__link" role="menuitem">طراحی UI</a></li>
+                          <li><a href="/editor/brand" class="XMAXSHOP-nested__link" role="menuitem">برندینگ</a></li>
+                          <li><a href="/editor/icons" class="XMAXSHOP-nested__link" role="menuitem">آیکون و ایلاستریشن</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">توسعه</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/code-studio" class="XMAXSHOP-nested__link" role="menuitem"> کد</a></li>
+                          <li><a href="/code-studio/frontend" class="XMAXSHOP-nested__link" role="menuitem">فرانت‌اند</a></li>
+                          <li><a href="/code-studio/backend" class="XMAXSHOP-nested__link" role="menuitem">بک‌اند</a></li>
+                          <li><a href="/code-studio/api" class="XMAXSHOP-nested__link" role="menuitem">API Builder</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">هوش مصنوعی</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/ai-assistant" class="XMAXSHOP-nested__link" role="menuitem">
+                            <span>دستیار هوشمند</span>
+                            <span class="XMAXSHOP-nested__link-badge XMAXSHOP-nested__link-badge--new">جدید</span>
+                          </a></li>
+                          <li><a href="/ai/image" class="XMAXSHOP-nested__link" role="menuitem">تولید تصویر</a></li>
+                          <li><a href="/ai/text" class="XMAXSHOP-nested__link" role="menuitem">تولید متن</a></li>
+                          <li><a href="/ai/automation" class="XMAXSHOP-nested__link" role="menuitem">اتوماسیون</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- پنل قالب‌ها -->
+                  <div class="XMAXSHOP-nested__panel" id="panel-templates" role="region" aria-label="قالب‌ها" hidden>
+                    <header class="XMAXSHOP-nested__panel-header">
+                      <h3 class="XMAXSHOP-nested__panel-title">قالب‌های آماده</h3>
+                      <a href="/templates" class="XMAXSHOP-nested__panel-all">مشاهده همه</a>
+                    </header>
+                    <div class="XMAXSHOP-nested__groups">
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">وب</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/templates/web" class="XMAXSHOP-nested__link" role="menuitem">لندینگ پیج</a></li>
+                          <li><a href="/templates/ecommerce" class="XMAXSHOP-nested__link" role="menuitem">فروشگاه آنلاین</a></li>
+                          <li><a href="/templates/blog" class="XMAXSHOP-nested__link" role="menuitem">وبلاگ</a></li>
+                          <li><a href="/templates/portfolio" class="XMAXSHOP-nested__link" role="menuitem">نمونه‌کار</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">موبایل</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/templates/mobile" class="XMAXSHOP-nested__link" role="menuitem">اپلیکیشن iOS</a></li>
+                          <li><a href="/templates/android" class="XMAXSHOP-nested__link" role="menuitem">اپلیکیشن Android</a></li>
+                          <li><a href="/templates/pwa" class="XMAXSHOP-nested__link" role="menuitem">PWA</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">رسانه</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/templates/social" class="XMAXSHOP-nested__link" role="menuitem">شبکه‌های اجتماعی</a></li>
+                          <li><a href="/templates/present" class="XMAXSHOP-nested__link" role="menuitem">ارائه و پاورپوینت</a></li>
+                          <li><a href="/templates/email" class="XMAXSHOP-nested__link" role="menuitem">خبرنامه ایمیل</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- پنل منابع -->
+                  <div class="XMAXSHOP-nested__panel" id="panel-resources" role="region" aria-label="منابع" hidden>
+                    <header class="XMAXSHOP-nested__panel-header">
+                      <h3 class="XMAXSHOP-nested__panel-title">منابع یادگیری</h3>
+                      <a href="/resources" class="XMAXSHOP-nested__panel-all">مشاهده همه</a>
+                    </header>
+                    <div class="XMAXSHOP-nested__groups">
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">مستندات</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/docs" class="XMAXSHOP-nested__link" role="menuitem">شروع سریع</a></li>
+                          <li><a href="/docs/api" class="XMAXSHOP-nested__link" role="menuitem">مرجع API</a></li>
+                          <li><a href="/docs/components" class="XMAXSHOP-nested__link" role="menuitem">کامپوننت‌ها</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">آموزش</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/tutorials" class="XMAXSHOP-nested__link" role="menuitem">ویدیوهای آموزشی</a></li>
+                          <li><a href="/tutorials/workshops" class="XMAXSHOP-nested__link" role="menuitem">کارگاه‌ها</a></li>
+                          <li><a href="/tutorials/certificates" class="XMAXSHOP-nested__link" role="menuitem">گواهینامه‌ها</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">جامعه</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/blog" class="XMAXSHOP-nested__link" role="menuitem">وبلاگ</a></li>
+                          <li><a href="/community" class="XMAXSHOP-nested__link" role="menuitem">انجمن کاربران</a></li>
+                          <li><a href="/showcase" class="XMAXSHOP-nested__link" role="menuitem">نمایشگاه آثار</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- پنل سازمانی -->
+                  <div class="XMAXSHOP-nested__panel" id="panel-enterprise" role="region" aria-label="سازمانی" hidden>
+                    <header class="XMAXSHOP-nested__panel-header">
+                      <h3 class="XMAXSHOP-nested__panel-title">راهکارهای سازمانی</h3>
+                      <a href="/enterprise" class="XMAXSHOP-nested__panel-all">مشاهده همه</a>
+                    </header>
+                    <div class="XMAXSHOP-nested__groups">
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">تیم</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/collab" class="XMAXSHOP-nested__link" role="menuitem">همکاری تیمی</a></li>
+                          <li><a href="/enterprise/roles" class="XMAXSHOP-nested__link" role="menuitem">مدیریت نقش‌ها</a></li>
+                          <li><a href="/enterprise/workspaces" class="XMAXSHOP-nested__link" role="menuitem">فضای کاری</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">امنیت</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/enterprise/sso" class="XMAXSHOP-nested__link" role="menuitem">ورود یکپارچه SSO</a></li>
+                          <li><a href="/enterprise/audit" class="XMAXSHOP-nested__link" role="menuitem">گزارش فعالیت</a></li>
+                          <li><a href="/enterprise/compliance" class="XMAXSHOP-nested__link" role="menuitem">انطباق و حریم خصوصی</a></li>
+                        </ul>
+                      </div>
+                      <div class="XMAXSHOP-nested__group">
+                        <h4 class="XMAXSHOP-nested__group-title">پشتیبانی</h4>
+                        <ul class="XMAXSHOP-nested__links">
+                          <li><a href="/enterprise/support" class="XMAXSHOP-nested__link" role="menuitem">پشتیبانی اختصاصی</a></li>
+                          <li><a href="/enterprise/sla" class="XMAXSHOP-nested__link" role="menuitem">SLA تضمینی</a></li>
+                          <li><a href="/demo" class="XMAXSHOP-nested__link" role="menuitem">درخواست دمو</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- پنل تبلیغاتی -->
+                <aside class="XMAXSHOP-nested__promo">
+                  <div class="XMAXSHOP-promo">
+                    <div class="XMAXSHOP-promo__visual" aria-hidden="true">
+                      <div class="XMAXSHOP-promo__glow"></div>
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="8" y="12" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M8 20h32" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="14" cy="16" r="2" fill="currentColor"/>
+                        <circle cx="20" cy="16" r="2" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <h3 class="XMAXSHOP-promo__title"></h3>
+                    <p class="XMAXSHOP-promo__desc">دسترسی نامحدود به تمام ابزارها، قالب‌ها و پشتیبانی اولویت‌دار</p>
+                    <a href="/pricing" class="XMAXSHOP-promo__cta" role="menuitem">
+                      مشاهده قیمت‌ها
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M10 3.5L6 8l4 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </aside>
+              </div>
+
+              <footer class="XMAXSHOP__bar">
+                <div class="XMAXSHOP__bar-links">
+                  <a href="/changelog" class="XMAXSHOP__bar-link" role="menuitem">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M8 2v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    تغییرات اخیر
+                  </a>
+                  <a href="/roadmap" class="XMAXSHOP__bar-link XMAXSHOP__bar-link--roadmap" role="menuitem">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M2 12l4-6 3 3 5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    نقشه راه
+                  </a>
+                </div>
+                <a href="/demo" class="XMAXSHOP__bar-cta" role="menuitem">درخواست دمو سازمانی</a>
+              </footer>
+            </div>
+          </div>
+        </li>
+
+        <!-- ایکس مکس دسته‌بندی‌ها — کارت‌محور -->
+        <li class="nav-item nav-item--has-XMAXSHOP" role="none">
+          <button
+            class="nav-link nav-link--trigger"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="XMAXSHOP-grid"
+            id="trigger-grid"
+          >
+            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="12" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="3" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="12" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span>دسته‌بندی‌ها</span>
+            <svg class="nav-link__chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3.5 5.5L7 9l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div
+            class="XMAXSHOP XMAXSHOP--compact XMAXSHOP--nested"
+            id="XMAXSHOP-grid"
+            role="menu"
+            aria-labelledby="trigger-grid"
+            hidden
+          >
+            <div class="XMAXSHOP__inner XMAXSHOP-nested XMAXSHOP-nested--compact">
+              <nav class="XMAXSHOP-nested__sidebar" aria-label="دسته‌های خلاقانه">
+                <p class="XMAXSHOP-nested__sidebar-label">دسته‌ها</p>
+                <ul class="XMAXSHOP-nested__cats">
+                  <li>
+                    <button class="XMAXSHOP-nested__cat is-active" type="button" data-panel="cat-design" aria-expanded="true" aria-controls="cat-design">
+                      <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--design" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 28 28" fill="none">
+                          <path d="M4 20l4-12 8 4 8-8 4 16H4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="XMAXSHOP-nested__cat-text">
+                        <span class="XMAXSHOP-nested__cat-label">طراحی</span>
+                        <span class="XMAXSHOP-nested__cat-desc">UI و برندینگ</span>
+                      </span>
+                      <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="XMAXSHOP-nested__cat" type="button" data-panel="cat-code" aria-expanded="false" aria-controls="cat-code">
+                      <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--code" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 28 28" fill="none">
+                          <path d="M9 8L4 14l5 6M19 8l5 6-5 6M16 4l-4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="XMAXSHOP-nested__cat-text">
+                        <span class="XMAXSHOP-nested__cat-label">کدنویسی</span>
+                        <span class="XMAXSHOP-nested__cat-desc">فرانت و بک</span>
+                      </span>
+                      <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="XMAXSHOP-nested__cat" type="button" data-panel="cat-media" aria-expanded="false" aria-controls="cat-media">
+                      <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--photo" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 28 28" fill="none">
+                          <rect x="3" y="7" width="22" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                          <circle cx="14" cy="15" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                      </span>
+                      <span class="XMAXSHOP-nested__cat-text">
+                        <span class="XMAXSHOP-nested__cat-label">رسانه</span>
+                        <span class="XMAXSHOP-nested__cat-desc">عکس، ویدیو، صدا</span>
+                      </span>
+                      <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="XMAXSHOP-nested__cat" type="button" data-panel="cat-write" aria-expanded="false" aria-controls="cat-write">
+                      <span class="XMAXSHOP-nested__cat-icon XMAXSHOP-nested__cat-icon--write" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 28 28" fill="none">
+                          <path d="M18 4l6 6-12 12H6v-6L18 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span class="XMAXSHOP-nested__cat-text">
+                        <span class="XMAXSHOP-nested__cat-label">نوشتن</span>
+                        <span class="XMAXSHOP-nested__cat-desc">محتوا و کپی</span>
+                      </span>
+                      <svg class="XMAXSHOP-nested__cat-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <path d="M9 3.5L5.5 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="XMAXSHOP-nested__content">
+                <div class="XMAXSHOP-nested__panel is-active" id="cat-design" role="region" aria-label="طراحی">
+                  <header class="XMAXSHOP-nested__panel-header">
+                    <h3 class="XMAXSHOP-nested__panel-title">طراحی</h3>
+                    <a href="/design" class="XMAXSHOP-nested__panel-all">همه</a>
+                  </header>
+                  <div class="XMAXSHOP-nested__groups XMAXSHOP-nested__groups--2col">
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">رابط کاربری</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/design/ui" class="XMAXSHOP-nested__link" role="menuitem">طراحی UI</a></li>
+                        <li><a href="/design/ux" class="XMAXSHOP-nested__link" role="menuitem">تجربه کاربری UX</a></li>
+                        <li><a href="/design/system" class="XMAXSHOP-nested__link" role="menuitem">Design System</a></li>
+                      </ul>
+                    </div>
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">برندینگ</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/design/brand" class="XMAXSHOP-nested__link" role="menuitem">هویت بصری</a></li>
+                        <li><a href="/design/logo" class="XMAXSHOP-nested__link" role="menuitem">لوگو</a></li>
+                        <li><a href="/design/print" class="XMAXSHOP-nested__link" role="menuitem">چاپ و بسته‌بندی</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="XMAXSHOP-nested__panel" id="cat-code" role="region" aria-label="کدنویسی" hidden>
+                  <header class="XMAXSHOP-nested__panel-header">
+                    <h3 class="XMAXSHOP-nested__panel-title">کدنویسی</h3>
+                    <a href="/code" class="XMAXSHOP-nested__panel-all">همه</a>
+                  </header>
+                  <div class="XMAXSHOP-nested__groups XMAXSHOP-nested__groups--2col">
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">فرانت‌اند</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/code/react" class="XMAXSHOP-nested__link" role="menuitem">React</a></li>
+                        <li><a href="/code/vue" class="XMAXSHOP-nested__link" role="menuitem">Vue.js</a></li>
+                        <li><a href="/code/css" class="XMAXSHOP-nested__link" role="menuitem">CSS پیشرفته</a></li>
+                      </ul>
+                    </div>
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">بک‌اند</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/code/node" class="XMAXSHOP-nested__link" role="menuitem">Node.js</a></li>
+                        <li><a href="/code/python" class="XMAXSHOP-nested__link" role="menuitem">Python</a></li>
+                        <li><a href="/code/database" class="XMAXSHOP-nested__link" role="menuitem">پایگاه داده</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="XMAXSHOP-nested__panel" id="cat-media" role="region" aria-label="رسانه" hidden>
+                  <header class="XMAXSHOP-nested__panel-header">
+                    <h3 class="XMAXSHOP-nested__panel-title">رسانه</h3>
+                    <a href="/media" class="XMAXSHOP-nested__panel-all">همه</a>
+                  </header>
+                  <div class="XMAXSHOP-nested__groups XMAXSHOP-nested__groups--2col">
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">تصویر و ویدیو</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/photo" class="XMAXSHOP-nested__link" role="menuitem">عکاسی</a></li>
+                        <li><a href="/video" class="XMAXSHOP-nested__link" role="menuitem">ویدیو و موشن</a></li>
+                        <li><a href="/video/edit" class="XMAXSHOP-nested__link" role="menuitem">تدوین</a></li>
+                      </ul>
+                    </div>
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">صدا</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/music" class="XMAXSHOP-nested__link" role="menuitem">موسیقی</a></li>
+                        <li><a href="/music/podcast" class="XMAXSHOP-nested__link" role="menuitem">پادکست</a></li>
+                        <li><a href="/music/sfx" class="XMAXSHOP-nested__link" role="menuitem">جلوه‌های صوتی</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="XMAXSHOP-nested__panel" id="cat-write" role="region" aria-label="نوشتن" hidden>
+                  <header class="XMAXSHOP-nested__panel-header">
+                    <h3 class="XMAXSHOP-nested__panel-title">نوشتن</h3>
+                    <a href="/write" class="XMAXSHOP-nested__panel-all">همه</a>
+                  </header>
+                  <div class="XMAXSHOP-nested__groups XMAXSHOP-nested__groups--2col">
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">محتوا</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/write/blog" class="XMAXSHOP-nested__link" role="menuitem">بلاگ‌نویسی</a></li>
+                        <li><a href="/write/seo" class="XMAXSHOP-nested__link" role="menuitem">محتوای SEO</a></li>
+                        <li><a href="/write/social" class="XMAXSHOP-nested__link" role="menuitem">شبکه‌های اجتماعی</a></li>
+                      </ul>
+                    </div>
+                    <div class="XMAXSHOP-nested__group">
+                      <h4 class="XMAXSHOP-nested__group-title">کپی‌رایت</h4>
+                      <ul class="XMAXSHOP-nested__links">
+                        <li><a href="/write/ads" class="XMAXSHOP-nested__link" role="menuitem">تبلیغات</a></li>
+                        <li><a href="/write/email" class="XMAXSHOP-nested__link" role="menuitem">ایمیل مارکتینگ</a></li>
+                        <li><a href="/write/landing" class="XMAXSHOP-nested__link" role="menuitem">متن لندینگ</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <footer class="XMAXSHOP-nested__footer">
+                  <a href="/categories" class="XMAXSHOP__footer-link" role="menuitem">مشاهده همه دسته‌ها</a>
+                  <span class="XMAXSHOP__footer-divider" aria-hidden="true">·</span>
+                  <a href="/popular" class="XMAXSHOP__footer-link" role="menuitem">پرطرفدارها</a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item nav-item--has-dropdown" role="none">
+          <button
+            class="nav-link nav-link--trigger"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="dropdown-more"
+            id="trigger-more"
+          >
+            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+              <circle cx="5" cy="11" r="1.5" fill="currentColor"/>
+              <circle cx="11" cy="11" r="1.5" fill="currentColor"/>
+              <circle cx="17" cy="11" r="1.5" fill="currentColor"/>
+            </svg>
+            <span>بیشتر</span>
+            <svg class="nav-link__chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3.5 5.5L7 9l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <ul
+            class="dropdown-menu"
+            id="dropdown-more"
+            role="menu"
+            aria-labelledby="trigger-more"
+            hidden
+          >
+            <li role="none">
+              <a href="/settings" class="dropdown-link" role="menuitem">
+                <span class="dropdown-link__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.2 4.2l1.4 1.4M14.4 14.4l1.4 1.4M4.2 15.8l1.4-1.4M14.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span class="dropdown-link__text">
+                  <span class="dropdown-link__label">تنظیمات</span>
+                  <span class="dropdown-link__desc">حساب و ترجیحات</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="/help" class="dropdown-link" role="menuitem">
+                <span class="dropdown-link__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M8 8a2 2 0 114 0c0 2-2 2-2 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="10" cy="15" r="0.75" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="dropdown-link__text">
+                  <span class="dropdown-link__label">راهنما</span>
+                  <span class="dropdown-link__desc">سوالات متداول</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="/contact" class="dropdown-link" role="menuitem">
+                <span class="dropdown-link__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M3 6l7 5 7-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="dropdown-link__text">
+                  <span class="dropdown-link__label">تماس</span>
+                  <span class="dropdown-link__desc">پشتیبانی مستقیم</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-actions nav-actions--mobile" role="none">
+          <a href="/login" class="nav-action nav-action--ghost">ورود</a>
+          <a href="/signup" class="nav-action nav-action--primary">شروع رایگان</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/login" class="nav-action nav-action--ghost">ورود</a>
+        <a href="/signup" class="nav-action nav-action--primary">شروع رایگان</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="demo-content">
+    <section class="hero">
+      <div class="hero__badge">
+        <span class="hero__badge-dot" aria-hidden="true"></span>
+        نسل جدید تجربه کاربری
+      </div>
+      <h1 class="hero__title">
+        خلاقیت را
+        <span class="hero__title-gradient">بدون مرز</span>
+        تجربه کنید
+      </h1>
+      <p class="hero__desc">
+        مگامنوی تو در تو با سه سطح ناوبری — دسته اصلی، زیردسته و لینک‌ها. روی «محصولات» هاور کنید و بین دسته‌ها جابه‌جا شوید.
+      </p>
+      <div class="hero__actions">
+        <a href="/explore" class="hero__btn hero__btn--primary">کاوش کنید</a>
+        <a href="/demo" class="hero__btn hero__btn--secondary">مشاهده دمو</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-value">۱۲K+</span>
+          <span class="hero__stat-label">پروژه فعال</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">۹۸٪</span>
+          <span class="hero__stat-label">رضایت کاربران</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">۵۰ms</span>
+          <span class="hero__stat-label">زمان باز شدن منو</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">سریع و روان</h3>
+        <p class="feature-card__desc">انیمیشن‌های بهینه با GPU acceleration برای تجربه‌ای بدون لگ</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M3 9h18M9 3v18" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">منوی تو در تو</h3>
+        <p class="feature-card__desc">سه سطح ناوبری — دسته اصلی، گروه و لینک — با تعویض روان پنل‌ها</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">دسترسی کامل</h3>
+        <p class="feature-card__desc">پشتیبانی از کیبورد، screen reader و فوکوس قابل مشاهده</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
